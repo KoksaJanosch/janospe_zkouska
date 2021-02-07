@@ -18,13 +18,15 @@ def nacti_soubor(jmeno_souboru):
     return text
 
 def uloz_soubor(samo, sou):
+    """ Uloží slovníky samohlásek a souhlásek do souboru letters.txt """
+
     file = open(os.path.join(sys.path[0], "letters.txt"), 'w', encoding="UTF-8")
-    file.write("Samohlásky:{} \nSouhlásky:{}".format(samo, sou))
+    file.write("Samohlásky: {} \nSouhlásky: {}".format(samo, sou))
     file.close()
 
 
 def samohlasky(txt):
-    """ pass """
+    """ Vytvoří slovník samohlásek, kde klíčem je název samohlásky a hodnotou její počet. """
 
     samo = ["a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú"]
     dic = {}
@@ -40,7 +42,7 @@ def samohlasky(txt):
 
 
 def souhlasky(txt):
-    """ pass """
+    """ Vytvoří slovník souhlásek, kde klíčem je název souhlásky a hodnotou její počet. """
 
     sou = ["h", "ch", "k", "r", "d", "t", "n", "ž", "š", "c", "č", "ř", "j", "ď", "ť", "ň", "b", "f", "l", "m", "p", "s", "v", "z"]
     dic = {}
