@@ -68,10 +68,3 @@ y_list = body[1]
 souradnice = teznice(x_list, y_list)
 uloz_soubor(souradnice)
 print("Těžnice má souřadnice:", souradnice)
-
-
-
-
-
-
-

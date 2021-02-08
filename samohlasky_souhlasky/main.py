@@ -28,7 +28,6 @@ def uloz_soubor(samo, sou):
         print(f'K adresáři není přístup.')
         exit()
 
-
 def letters(txt):
     """ Vytvoří slovník samohlásek, kde klíčem je název samohlásky a hodnotou její počet. """
 
@@ -64,6 +63,9 @@ text = nacti_soubor("data").lower()
 # ? Ochrana proti práznému vstupnímu souboru
 if not text:
     print("Vstupní soubor je prázdný, zkontrolujte jej prosím.")
+    quit()
+elif len(text) > 10000:
+    print("Text je příliš dlouhý (max. 10 000 znaků).")
     quit()
 else:
     print("Text byl načten v pořádku (obsahuje", len(text), 'znaků).')
